@@ -1,43 +1,29 @@
 <template>
-	<nav class="flex items-center justify-between flex-wrap bg-blue-600 p-6">
-		<div class="text-white mr-6">
-			<h1 class="font-semibold text-xl tracking-tight">Trader simulator</h1>
-		</div>
-		<div
-			class="w-full flex-grow flex-wrap lg:flex lg:items-center lg:w-auto"
-		>
-			<div class="text-md lg:flex-grow">
-				<router-link to="/">
-					<a
-						class="block mt-4 lg:inline-block lg:mt-0 text-white hover:underline mr-4 cursor-pointer"
-					>
-						Início
-					</a>
-				</router-link>
-				<router-link to="/portfolio">
-					<a
-						class="block mt-4 lg:inline-block lg:mt-0 text-white hover:underline mr-4 cursor-pointer"
-					>
-						Portfolio
-					</a>
-				</router-link>
-				<router-link to="/stocks">
-					<a
-						class="block mt-4 lg:inline-block lg:mt-0 text-white hover:underline cursor-pointer"
-					>
+	<nav class="bg-blue-800 p-6">
+		<div class="flex items-center justify-between items-center w-auto">
+			<div class="flex items-end">
+				<h1 class="font-semibold text-3xl tracking-tight text-white mr-6">Trader simulator</h1>
+				<div class="text-md lg:flex-grow">
+					<router-link to="/" class="mt-4 hover:underline mr-4 cursor-pointer text-white">
+							Início
+					</router-link>
+					<router-link to="/portfolio" class="mt-4 hover:underline mr-4 cursor-pointer text-white">
+							Portfolio
+					</router-link>
+					<router-link to="/stocks" class="mt-4 hover:underline cursor-pointer text-white">
 						Ações
-					</a>
-				</router-link>
+					</router-link>
+				</div>
 			</div>
 			<div>
 				<button
-					class="text-white mr-4 border rounded px-4 py-1 hover:bg-blue-800"
+					class="text-white mr-4 border rounded px-4 py-1 hover:bg-blue-600"
 				>
 					Finalizar Dia
 				</button>
 				<div class="dropdown inline-block relative">
 					<button
-						class="bg-blue-800 text-white font-semibold py-2 px-4 rounded inline-flex items-center"
+						class="bg-blue-600 text-white font-semibold py-2 px-4 rounded inline-flex items-center"
 					>
 						<span class="mr-1">Salvar & carregar</span>
 						<svg
@@ -78,5 +64,9 @@ export default {};
 <style>
 .dropdown:hover .dropdown-menu {
 	display: block;
+}
+.router-link-active, .is-active{
+	text-decoration: underline;
+	color: white;
 }
 </style>

@@ -7,10 +7,20 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+  },
   "dependencies": {
+    "axios": "^0.27.2",
     "core-js": "^3.8.3",
+    "dotenv": "^16.0.1",
+    "fs": "0.0.1-security",
+    "os-browserify": "^0.3.0",
     "vue": "^3.2.13",
     "vue-router": "^4.0.15",
+    "vue-toastification": "^2.0.0-rc.5",
     "vuex": "^4.0.2"
   },
   "devDependencies": {
